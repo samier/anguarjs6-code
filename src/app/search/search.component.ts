@@ -29,37 +29,25 @@ export class SearchComponent implements OnInit {
   getSearchData(){
     this.SearchService.getSearchData()
         .subscribe(res => {
-          console.log("res====>",res);
           this.searchData = res;
         });
   }
   
-  onSearchChange(searchValue : string ) {  
-    //console.log("uuuuuuuu====>",searchValue);
+  onSearchChange(searchValue : string ) { 
     this.SearchService.likeSearch(searchValue)
     .subscribe(res => {
           this.dataList = res;
     });
-
-    //searchText = searchText.toUpperCase();
-
   }
 
   onSubmit(){
-    console.log("submit Call");
-    console.log("sdsdassa=====>",this.selectname);
-    console.log("sdsdassa=====>",this.selectnameId);
     this.SearchService.getIdData(this.selectnameId)
     .subscribe(res => {
       this.searchData = res;
     });
-
-    
   }
 
   onChange(data){
-    console.log("submit Call change");
-    console.log("sdsdassa=====>",data);
     this.selectname=data.name; 
     this.selectnameId=data.id;
     this.dataList=[];

@@ -7,7 +7,11 @@
 <!-- /.row -->
 <div class="photo-img">
   <div class="row">
-    <div class="col-lg-2 col-md-2"  *ngFor="let photo of photos">
+    <div class="col-lg-2 col-md-2"  *ngFor="let photo of photos" infinite-scroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollUpDistance]="4"
+    [infiniteScrollThrottle]="300"
+    (scrolled)="myFunction(pagination.page,pagination.limit)">
         <div class="panel panel-primary">
             <div class="panel">
                 <img src="{{photo.thumbnailUrl}}"/>

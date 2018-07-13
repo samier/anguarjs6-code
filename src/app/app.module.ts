@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from "@angular/forms";
+import { InfiniteScrollModule } from 'angular2-infinite-scroll';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -31,6 +33,7 @@ import { SearchService } from '../services/search.service';
     HttpModule,
     FormsModule,
     AutoCompleteModule,
+    InfiniteScrollModule,
     
 
   ],
@@ -41,3 +44,5 @@ import { SearchService } from '../services/search.service';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// /platformBrowserDynamic().bootstrapModule(AppModule);

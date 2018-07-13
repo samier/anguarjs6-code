@@ -23,6 +23,13 @@
     border-color: #204d74;
     color: black;
 }
+.btn-animataion.hvr-grow-rotate .btn-primary:hover, .btn-animataion.hvr-grow-rotate .btn-primary:focus, .btn-animataion.hvr-grow-rotate .btn-primary:active{
+    -webkit-transform: scale(1.1) rotate(4deg);
+    transform: scale(1.1) rotate(4deg);
+    background-color: white;
+    border-color: #204d74;
+    color: black;
+}
 
 .circle-animate {
     width: 50px;
@@ -33,6 +40,7 @@
     transform-origin: 50% 150px;
     background-color: #8FC1E0;
 }
+
 
 
 @keyframes round_round {
