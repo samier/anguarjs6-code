@@ -1,0 +1,45 @@
+.btn-animataion.grow .btn-primary{
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+.btn-animataion.grow .btn-primary:hover, .btn-animataion.grow .btn-primary:focus, .btn-animataion.grow .btn-primary:active{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: white;
+    border-color: #204d74;
+    color: black;
+}
+.btn-animataion.shrink .btn-primary:hover, .btn-animataion.shrink .btn-primary:focus, .btn-animataion.shrink .btn-primary:active{
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    background-color: white;
+    border-color: #204d74;
+    color: black;
+}
+
+.circle-animate {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: round_round 3s linear infinite;
+    margin: 50px auto 0;
+    transform-origin: 50% 150px;
+    background-color: #8FC1E0;
+}
+
+
+@keyframes round_round {
+    from { 
+        transform: rotate(0deg); 
+    }
+    to { 
+        transform: rotate(360deg); 
+    }
+}

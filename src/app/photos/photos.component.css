@@ -1,0 +1,2 @@
+.photo-img .col-lg-2:nth-child(5n+1){display:block; clear: both; margin-left: 8.333%;}
+img{max-width: 100%;}
